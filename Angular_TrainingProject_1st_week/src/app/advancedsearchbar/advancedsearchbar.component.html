@@ -1,0 +1,122 @@
+<div class="row">
+    <div class="column-md-4">
+      <div style="margin-top:70px;margin-left:80px;"class="container">
+    <div class="row">
+        <div style="background-color:rgb(202, 202, 202)" class="col-md-10 ">
+        <div style ="height:450px;margin-bottom:10px;background-color:hsl(180, 3%, 87%); "class="filter-sidebar">
+        <div style="background-color:rgb(82, 82, 82)" class="row card-body py-3 mb-4 ">
+        <h4 style ="color:#ffffff ">Narrow Your Results</h4>
+        </div>    
+        <div style="margin-top:20px;height:50px; " class="form-group">
+        <select class="form-control" id="conditionsselect1">
+        <option>Distance</option>
+        <option>option1</option>
+        <option>option2</option>
+        </select>-
+        </div>
+  
+  
+        <div style="margin-top:30px" class="form-group">
+          <select class="form-control" id="selectEducation">
+            <option>Education Qualities</option>
+            <option>Masters</option>
+            <option>Bachelors</option>
+            <option>Diploma</option>
+            <option>Certification</option>
+          </select>
+       </div>
+  
+       <div  style="margin-top:40px" class="form-group">
+        <select class="form-control" id="selectExperience">
+          <option>Experience</option>
+          <option> 1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+     </div>
+  
+  
+     <div   style="margin-top:40px" class="form-group">
+      <select class="form-control" id="selectRating">
+        <option>Rating(Out of Five)</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+   </div>
+  
+  
+   <div  style="margin-top:40px"  class="form-group">
+    <select class="form-control" id="selectRates">
+      <option>Rates</option>
+      <option> 5000</option>
+      <option>10000</option>
+      <option>15000</option>
+      <option>20000</option>
+      <option>25000</option>
+    </select>
+  </div>
+  <hr>
+  <button (click)= "advanceSearch()"style="margin-left:24px;color:white;"type="btn" class="btn  btn-danger ">Find Now</button>
+  <button  style="margin-left:20px;" type="btn" class="btn btn-danger">Reset All</button>
+  </div>
+  </div>
+  </div>
+  </div> 
+  </div>
+  <div style="height:650px;width:1400px;margin-top:60px;margin-left:20px;"class="card">
+  <div class="row">
+    
+  <div style="margin-left:100px" class ="column-md-2">
+  <div *ngFor="let employee of employees" style="margin-top:90px;"class="row">
+            <div class="column-md-2">
+                <div class="card" style="background-color:#e2dddd;width:10cm;height:11.5cm;" >
+                    
+              
+                  <div style="width:10cm;height:11.5cm;" class="card-body">
+                      <div class="row">
+                        <div class="col s12 m6">
+                          <div stle="height:7cm;" class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                              <span class="card-title"><h5>JOB TITLE :- {{employee.jobtitle}} </h5></span>
+                             
+                              
+                              <h6 id="employeeName">NAME :- {{employee.first_name}} {{employee.last_name}}</h6>
+                              <h6>CITY :- {{employee.city}}</h6><hr>
+                             
+                              <h6>EXPERIENCE :- {{employee.experience}}</h6>
+                              <h6>EDUCATIONAL QUALIFICATION :- {{employee.educationalQualification}}</h6><hr>
+
+                              <h6>EMPLOYEE RATE :- {{employee.rate}}</h6>
+                              <h6>EMPLOYEE RATING :- {{employee.rating}}</h6><hr>
+
+                              <p>DESCRIPTION :- {{employee.description}}</p>
+                            </div>
+                           
+                        </div>
+                      </div>
+               </div>
+               <div class="card-action">
+                  <button  id={{employee.user_id}} (click)="viewprofile(this.employee.user_id)" style="margin-left:2.9cm;color: rgb(165, 3, 3);"><b  >View Profile</b></button>
+                  <div class="row">
+                 </div>
+              </div>
+        </div>
+        
+   </div>
+  </div> 
+  </div>
+</div>
+<div style="margin-left:100px" class ="column-md-2">
+    <button style="margin-top:20px;margin-left:620px" class="button button3">
+       <b style="text-align: center;margin-top:20px;font-size:20px;">Compare Hair Stylists</b>
+      </button>
+</div>
+
+</div>
+ </div> 
+</div>

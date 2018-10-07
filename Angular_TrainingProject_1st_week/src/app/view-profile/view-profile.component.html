@@ -1,0 +1,47 @@
+<div *ngFor="let user_detail of user_details"class="row">
+    <div class="column-md-4">
+      <div style = "width:8cm;margin-left:6cm;margin-top:1.5cm;"class="card">
+    <img src="http://www.euforikanapoli.it/wp-content/uploads/2014/04/avatar_generico.jpg" alt="Avatar" style="width:100%;"><hr>
+    <div class="container">
+      <h4>DISPLAY NAME :- {{user_detail.display_name}}</h4>
+      <h5>CITY :- {{user_detail.city}}</h5>
+      <h5>EXPERIENCE :- {{user_detail.experience}}</h5>
+      <h5>EDUCATIONAL QUALIFICATIONS :- {{user_detail.educationalQualification}}</h5>
+      <h5>RATING :- {{user_detail.rating}}</h5>
+      <h5>RATE :- {{user_detail.rate}}</h5>
+  </div>
+  </div>
+</div>
+<div class="column-md-4">
+
+  <div style = "width:16cm;margin-left:6cm;margin-top:1.5cm;height:6.5cm"class="card">
+
+    
+<div class="container mt-3">
+    
+   <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a  style="width:7.5cm;background-color: rgb(185, 36, 9);color: white;"class="nav-link danger" data-toggle="tab" href="#home"><b>Skills</b></a>
+      </li>
+      <li class="nav-item">
+        <a  style="width:7.4cm;background-color: rgb(185, 36, 9);color: white;"class="nav-link" data-toggle="tab" href="#menu1"><b>Description</b></a>
+      </li>
+     
+    </ul>
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active"><br>
+        <h3>Skills</h3>
+        <p>{{user_detail.skill}}</p>
+      </div>
+      <div id="menu1" class="container tab-pane fade"><br>
+        <h3>Description</h3>
+        <p>{{user_detail.description}}</p>
+      </div>
+       </div>
+  </div>
+  
+     
+
+  </div>
+  </div>
+  </div>
